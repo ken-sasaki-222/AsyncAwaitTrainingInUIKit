@@ -53,7 +53,6 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func tapRefreshButton(_ sender: UIBarButtonItem) {
-        indicator.startAnimating()
         refreshTableView()
     }
 }
