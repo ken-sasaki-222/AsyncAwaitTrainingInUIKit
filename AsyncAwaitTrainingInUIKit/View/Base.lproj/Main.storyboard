@@ -27,28 +27,41 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JZc-6S-gbr">
                                 <rect key="frame" x="0.0" y="139" width="414" height="757"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="55" id="5NR-Sk-EYL">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="55"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="80" id="5NR-Sk-EYL">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5NR-Sk-EYL" id="cz7-iR-Vs1">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozp-T8-Bbv">
-                                                    <rect key="frame" x="23" y="16.5" width="200" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="full_name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozp-T8-Bbv">
+                                                    <rect key="frame" x="23" y="17" width="350" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="5le-TL-2QV"/>
-                                                        <constraint firstAttribute="width" constant="200" id="oSc-sk-5zF"/>
+                                                        <constraint firstAttribute="width" constant="350" id="oSc-sk-5zF"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYL-Sk-v4N">
+                                                    <rect key="frame" x="23" y="46" width="350" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="AXT-ow-56S"/>
+                                                        <constraint firstAttribute="width" constant="350" id="yAL-Aq-uBD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xYL-Sk-v4N" secondAttribute="trailing" constant="21" id="0ux-c1-kHT"/>
                                                 <constraint firstItem="ozp-T8-Bbv" firstAttribute="leading" secondItem="cz7-iR-Vs1" secondAttribute="leadingMargin" constant="3" id="JgW-bt-WxY"/>
-                                                <constraint firstItem="ozp-T8-Bbv" firstAttribute="top" secondItem="cz7-iR-Vs1" secondAttribute="topMargin" constant="5.5" id="lGz-U8-0px"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ozp-T8-Bbv" secondAttribute="bottom" constant="5.5" id="qDv-5n-QOF"/>
+                                                <constraint firstItem="xYL-Sk-v4N" firstAttribute="leading" secondItem="cz7-iR-Vs1" secondAttribute="leadingMargin" constant="3" id="XtL-Gg-vSg"/>
+                                                <constraint firstItem="xYL-Sk-v4N" firstAttribute="top" secondItem="ozp-T8-Bbv" secondAttribute="bottom" constant="7" id="a6v-rL-51a"/>
+                                                <constraint firstItem="ozp-T8-Bbv" firstAttribute="top" secondItem="cz7-iR-Vs1" secondAttribute="topMargin" constant="6" id="g0G-6A-Gq9"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="xYL-Sk-v4N" secondAttribute="bottom" constant="1" id="vdw-PR-d7h"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -67,7 +80,14 @@
                             <constraint firstItem="JZc-6S-gbr" firstAttribute="top" secondItem="e1v-t0-WPf" secondAttribute="bottom" id="xLM-FA-g2w"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="検索" id="upG-X1-lXu"/>
+                    <navigationItem key="navigationItem" title="検索" id="upG-X1-lXu">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="pMn-qL-6I1">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="tapRefreshButton:" destination="BYZ-38-t0r" id="thF-b8-uaK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="e1v-t0-WPf" id="y8X-yU-OLo"/>
                         <outlet property="tableView" destination="JZc-6S-gbr" id="aT8-MJ-rJK"/>
@@ -89,10 +109,10 @@
                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="18"/>
                         </textAttributes>
                         <navigationBarAppearance key="standardAppearance">
-                            <color key="backgroundColor" systemColor="systemGrayColor"/>
+                            <color key="backgroundColor" systemColor="systemGray2Color"/>
                         </navigationBarAppearance>
                         <navigationBarAppearance key="scrollEdgeAppearance">
-                            <color key="backgroundColor" systemColor="systemGrayColor"/>
+                            <color key="backgroundColor" systemColor="systemGray2Color"/>
                         </navigationBarAppearance>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -106,6 +126,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -14,4 +14,5 @@ struct SearchResponseModel: Decodable {
 struct Item: Decodable {
     var name: String
     var full_name: String
+    var description: String?
 }

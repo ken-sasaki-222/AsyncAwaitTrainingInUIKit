@@ -51,6 +51,11 @@ class SearchViewController: UIViewController {
         self.items = []
         tableView.reloadData()
     }
+    
+    @IBAction func tapRefreshButton(_ sender: UIBarButtonItem) {
+        indicator.startAnimating()
+        refreshTableView()
+    }
 }
 
 extension SearchViewController: UISearchBarDelegate {
@@ -95,8 +100,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let name = cell.viewWithTag(1) as? UILabel
+        let description = cell.viewWithTag(2) as? UILabel
         name?.text = items[indexPath.row].full_name
-        
+        if description?.text != "" {
+            description?.text = items[indexPath.row].description
+        } else {
+            description?.text = "not description text."
+        }
         return cell
     }
     
