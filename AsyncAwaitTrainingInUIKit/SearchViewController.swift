@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SearchViewController.swift
 //  AsyncAwaitTrainingInUIKit
 //
 //  Created by sasaki.ken on 2021/11/28.
@@ -7,25 +7,40 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpSearchBar()
         setUpTableView()
+    }
+    
+    private func setUpSearchBar() {
+        searchBar.delegate = self
     }
     
     private func setUpTableView() {
         tableView.delegate = self
         tableView.dataSource = self
     }
-
-
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        view.endEditing(true)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let searchText = searchBar.text else {
+            return
+        }
+        print("検索テキスト:", searchText)
+    }
+}
+
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
