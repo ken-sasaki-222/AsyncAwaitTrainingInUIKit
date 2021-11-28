@@ -37,8 +37,8 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="リポジトリ名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLd-lL-wri">
                                                     <rect key="frame" x="23" y="16.5" width="200" height="22"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="200" id="5Vd-wi-FPY"/>
-                                                        <constraint firstAttribute="height" constant="22" id="ytO-Pg-nU7"/>
+                                                        <constraint firstAttribute="height" constant="22" id="0Jk-gk-GhL"/>
+                                                        <constraint firstAttribute="width" constant="200" id="khk-2w-Kvt"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="16"/>
                                                     <nil key="textColor"/>
@@ -46,10 +46,10 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="eLd-lL-wri" secondAttribute="bottom" constant="5.5" id="EZV-2y-0pf"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="eLd-lL-wri" secondAttribute="trailing" constant="171" id="Ouj-ma-eXq"/>
-                                                <constraint firstItem="eLd-lL-wri" firstAttribute="top" secondItem="cz7-iR-Vs1" secondAttribute="topMargin" constant="5.5" id="YWm-b3-hsJ"/>
-                                                <constraint firstItem="eLd-lL-wri" firstAttribute="leading" secondItem="cz7-iR-Vs1" secondAttribute="leadingMargin" constant="3" id="eyo-jl-tuY"/>
+                                                <constraint firstItem="eLd-lL-wri" firstAttribute="top" secondItem="cz7-iR-Vs1" secondAttribute="topMargin" constant="5.5" id="EqA-o6-FqI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="eLd-lL-wri" secondAttribute="trailing" constant="171" id="NCh-08-YQi"/>
+                                                <constraint firstItem="eLd-lL-wri" firstAttribute="leading" secondItem="cz7-iR-Vs1" secondAttribute="leadingMargin" constant="3" id="WrK-og-qhv"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eLd-lL-wri" secondAttribute="bottom" constant="5.5" id="dJw-vI-fXB"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>

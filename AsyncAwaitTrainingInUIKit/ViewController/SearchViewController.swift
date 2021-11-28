@@ -10,6 +10,17 @@ import UIKit
 class SearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    private var searchRepository: SearchRepositoryInterface
+    
+    init(searchRepository: SearchRepositoryInterface) {
+        self.searchRepository = searchRepository
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        self.searchRepository = RepositoryLocator.getSearchRepository()
+        super.init(coder: coder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
