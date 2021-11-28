@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SearchRepositoryInterface {
-    func searchGitHubRepository(searchText: String)
+    func searchGitHubRepository(searchText: String) async throws -> [Item]?
 }

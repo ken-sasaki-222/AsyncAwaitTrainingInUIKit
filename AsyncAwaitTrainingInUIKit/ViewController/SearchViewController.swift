@@ -11,6 +11,8 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     private var searchRepository: SearchRepositoryInterface
+    private var indicator = UIActivityIndicatorView()
+    private var items: [Item] = []
     
     init(searchRepository: SearchRepositoryInterface) {
         self.searchRepository = searchRepository
@@ -26,6 +28,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         setUpSearchBar()
         setUpTableView()
+        setUpIndicator()
     }
     
     private func setUpSearchBar() {
@@ -35,6 +38,18 @@ class SearchViewController: UIViewController {
     private func setUpTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    private func setUpIndicator() {
+        indicator.center = view.center
+        indicator.style = .large
+        indicator.color = .lightGray
+        view.addSubview(indicator)
+    }
+    
+    private func refreshTableView() {
+        self.items = []
+        tableView.reloadData()
     }
 }
 
@@ -50,10 +65,21 @@ extension SearchViewController: UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        indicator.startAnimating()
+        refreshTableView()
         guard let searchText = searchBar.text else {
+            indicator.stopAnimating()
             return
         }
-        print("検索テキスト:", searchText)
+        Task {
+            guard let items = try await searchRepository.searchGitHubRepository(searchText: searchText) else {
+                indicator.stopAnimating()
+                return
+            }
+            self.items = items
+            tableView.reloadData()
+            indicator.stopAnimating()
+        }
     }
 }
 
@@ -63,15 +89,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
         let name = cell.viewWithTag(1) as? UILabel
-        
-        name?.text = "AsyncAwaitTrainingInUIKit"
+        name?.text = items[indexPath.row].full_name
         
         return cell
     }
