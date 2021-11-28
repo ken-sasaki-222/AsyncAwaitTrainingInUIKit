@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="入力してください" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e1v-t0-WPf">
+                            <searchBar contentMode="redraw" placeholder="入力してください" translatesAutoresizingMaskIntoConstraints="NO" id="e1v-t0-WPf">
                                 <rect key="frame" x="0.0" y="88" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                                 <scopeButtonTitles>
@@ -34,11 +34,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="リポジトリ名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLd-lL-wri">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozp-T8-Bbv">
                                                     <rect key="frame" x="23" y="16.5" width="200" height="22"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="22" id="0Jk-gk-GhL"/>
-                                                        <constraint firstAttribute="width" constant="200" id="khk-2w-Kvt"/>
+                                                        <constraint firstAttribute="height" constant="22" id="5le-TL-2QV"/>
+                                                        <constraint firstAttribute="width" constant="200" id="oSc-sk-5zF"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="16"/>
                                                     <nil key="textColor"/>
@@ -46,10 +46,9 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="eLd-lL-wri" firstAttribute="top" secondItem="cz7-iR-Vs1" secondAttribute="topMargin" constant="5.5" id="EqA-o6-FqI"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="eLd-lL-wri" secondAttribute="trailing" constant="171" id="NCh-08-YQi"/>
-                                                <constraint firstItem="eLd-lL-wri" firstAttribute="leading" secondItem="cz7-iR-Vs1" secondAttribute="leadingMargin" constant="3" id="WrK-og-qhv"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="eLd-lL-wri" secondAttribute="bottom" constant="5.5" id="dJw-vI-fXB"/>
+                                                <constraint firstItem="ozp-T8-Bbv" firstAttribute="leading" secondItem="cz7-iR-Vs1" secondAttribute="leadingMargin" constant="3" id="JgW-bt-WxY"/>
+                                                <constraint firstItem="ozp-T8-Bbv" firstAttribute="top" secondItem="cz7-iR-Vs1" secondAttribute="topMargin" constant="5.5" id="lGz-U8-0px"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ozp-T8-Bbv" secondAttribute="bottom" constant="5.5" id="qDv-5n-QOF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
