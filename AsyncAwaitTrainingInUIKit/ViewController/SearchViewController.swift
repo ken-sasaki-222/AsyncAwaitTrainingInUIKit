@@ -96,7 +96,7 @@ extension SearchViewController: UISearchBarDelegate {
                         print("items:", items as Any)
                         
                         if items.count == 0 {
-                            let emptyItem = Item(name: "", full_name: "検索結果0件", description: "")
+                            let emptyItem = Item(full_name: "検索結果0件", description: "")
                             items.append(emptyItem)
                             self.items = items
                             tableView.reloadData()
