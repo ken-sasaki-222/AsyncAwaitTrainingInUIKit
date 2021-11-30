@@ -52,8 +52,21 @@ class SearchViewController: UIViewController {
         tableView.reloadData()
     }
     
+    private func showSearchTextIsEmptyAlert() {
+        let alert = UIAlertController(title: "確認", message: "リポジトリ名を入力してください", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "やり直す", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func showSearchResponseErrorAlert() {
+        let alert = UIAlertController(title: "エラー", message: "検索に失敗しました", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "やり直す", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func tapRefreshButton(_ sender: UIBarButtonItem) {
         refreshTableView()
+        searchBar.text = ""
     }
 }
 
@@ -71,18 +84,36 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         indicator.startAnimating()
         refreshTableView()
-        guard let searchText = searchBar.text else {
-            indicator.stopAnimating()
-            return
-        }
-        Task {
-            guard let items = try await searchRepository.searchGitHubRepository(searchText: searchText) else {
+        
+        if let searchText = searchBar.text {
+            if searchText == "" {
+                showSearchTextIsEmptyAlert()
                 indicator.stopAnimating()
-                return
+            } else {
+                Task {
+                    do {
+                        var items = try await searchRepository.searchGitHubRepository(searchText: searchText)
+                        print("items:", items as Any)
+                        
+                        if items.count == 0 {
+                            let emptyItem = Item(name: "", full_name: "検索結果0件", description: "")
+                            items.append(emptyItem)
+                            self.items = items
+                            tableView.reloadData()
+                            indicator.stopAnimating()
+                        } else {
+                            self.items = items
+                            tableView.reloadData()
+                            indicator.stopAnimating()
+                        }
+                    }
+                    catch(let error) {
+                        print("error:", error.localizedDescription)
+                        indicator.stopAnimating()
+                        showSearchResponseErrorAlert()
+                    }
+                }
             }
-            self.items = items
-            tableView.reloadData()
-            indicator.stopAnimating()
         }
     }
 }
