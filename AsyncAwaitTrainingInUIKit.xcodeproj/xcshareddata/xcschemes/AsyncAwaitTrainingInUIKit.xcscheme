@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D890B7652753358F005147AB"
+               BuildableName = "AsyncAwaitTrainingInUIKitTests.xctest"
+               BlueprintName = "AsyncAwaitTrainingInUIKitTests"
+               ReferencedContainer = "container:AsyncAwaitTrainingInUIKit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

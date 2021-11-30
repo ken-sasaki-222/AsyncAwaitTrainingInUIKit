@@ -17,9 +17,18 @@ class SearchRepositoryDataStoreTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func test_searchRepositoryDataStore() async throws {
+        let dataStore = SearchRepositoryDataStore()
+        let searchText = "Swift"
+        do {
+            let response = try await dataStore.searchRepositories(query: searchText)
+            let items = response.items
+            print("Success search repository dataStore.")
+            print("items:", items)
+        }
+        catch(let error) {
+            XCTFail(error.localizedDescription)
+        }
     }
 
     func testPerformanceExample() throws {
