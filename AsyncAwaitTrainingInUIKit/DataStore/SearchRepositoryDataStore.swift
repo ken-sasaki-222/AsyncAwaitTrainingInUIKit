@@ -9,17 +9,18 @@ import Foundation
 
 class SearchRepositoryDataStore {
     private let baseUrl = "https://api.github.com/"
+    private let shared = URLSession.shared
     private let decoder = JSONDecoder()
     
-    func searchRepositories(query: String) async throws -> SearchResponseModel? {
-        let urlString = baseUrl + "search/repositories?q=\(query)"
+    func searchRepositories(query: String) async throws -> SearchResponseModel {
+        let queryString = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let urlString = baseUrl + "search/repositories?q=\(queryString ?? "")"
         guard let url = URL(string: urlString) else {
-            return nil
+            throw NSError(domain: "error", code: -1, userInfo: nil)
         }
         let request = URLRequest(url: url)
-        async let (data, _) = URLSession.shared.data(for: request)
-        let response = try await decoder.decode(SearchResponseModel.self, from: data)
-        print("response:",response)
+        let (data, _) = try await shared.data(for: request)
+        let response = try decoder.decode(SearchResponseModel.self, from: data)
         return response
     }
 }
