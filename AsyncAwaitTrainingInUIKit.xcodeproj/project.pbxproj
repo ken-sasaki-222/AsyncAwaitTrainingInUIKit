@@ -13,7 +13,6 @@
 		D890B75B2753358E005147AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D890B7592753358E005147AB /* Main.storyboard */; };
 		D890B75D2753358F005147AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D890B75C2753358F005147AB /* Assets.xcassets */; };
 		D890B7602753358F005147AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D890B75E2753358F005147AB /* LaunchScreen.storyboard */; };
-		D890B76B2753358F005147AB /* AsyncAwaitTrainingInUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D890B76A2753358F005147AB /* AsyncAwaitTrainingInUIKitTests.swift */; };
 		D890B7752753358F005147AB /* AsyncAwaitTrainingInUIKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D890B7742753358F005147AB /* AsyncAwaitTrainingInUIKitUITests.swift */; };
 		D890B7772753358F005147AB /* AsyncAwaitTrainingInUIKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D890B7762753358F005147AB /* AsyncAwaitTrainingInUIKitUITestsLaunchTests.swift */; };
 		D890B789275362C4005147AB /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D890B788275362C4005147AB /* SearchRepository.swift */; };
@@ -21,6 +20,12 @@
 		D890B78D275362F5005147AB /* SearchRepositoryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D890B78C275362F5005147AB /* SearchRepositoryDataStore.swift */; };
 		D890B79127536686005147AB /* RepositoryLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D890B79027536686005147AB /* RepositoryLocator.swift */; };
 		D890B7932753846B005147AB /* SearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D890B7922753846B005147AB /* SearchResponseModel.swift */; };
+		D8E5C3C32755BED1001146E0 /* SearchRepositoryDataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E5C3C22755BED1001146E0 /* SearchRepositoryDataStoreTests.swift */; };
+		D8E5C3C42755BED9001146E0 /* SearchRepositoryDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D890B78C275362F5005147AB /* SearchRepositoryDataStore.swift */; };
+		D8E5C3C52755BEDC001146E0 /* SearchRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = D890B78A275362CF005147AB /* SearchRepositoryInterface.swift */; };
+		D8E5C3C62755BEDE001146E0 /* SearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D890B788275362C4005147AB /* SearchRepository.swift */; };
+		D8E5C3C72755BEE3001146E0 /* RepositoryLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D890B79027536686005147AB /* RepositoryLocator.swift */; };
+		D8E5C3C82755BEE8001146E0 /* SearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D890B7922753846B005147AB /* SearchResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +55,6 @@
 		D890B75F2753358F005147AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D890B7612753358F005147AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D890B7662753358F005147AB /* AsyncAwaitTrainingInUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsyncAwaitTrainingInUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D890B76A2753358F005147AB /* AsyncAwaitTrainingInUIKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitTrainingInUIKitTests.swift; sourceTree = "<group>"; };
 		D890B7702753358F005147AB /* AsyncAwaitTrainingInUIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsyncAwaitTrainingInUIKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D890B7742753358F005147AB /* AsyncAwaitTrainingInUIKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitTrainingInUIKitUITests.swift; sourceTree = "<group>"; };
 		D890B7762753358F005147AB /* AsyncAwaitTrainingInUIKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAwaitTrainingInUIKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 		D890B78C275362F5005147AB /* SearchRepositoryDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryDataStore.swift; sourceTree = "<group>"; };
 		D890B79027536686005147AB /* RepositoryLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryLocator.swift; sourceTree = "<group>"; };
 		D890B7922753846B005147AB /* SearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponseModel.swift; sourceTree = "<group>"; };
+		D8E5C3C12755BED1001146E0 /* AsyncAwaitTrainingInUIKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AsyncAwaitTrainingInUIKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		D8E5C3C22755BED1001146E0 /* SearchRepositoryDataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryDataStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +131,8 @@
 		D890B7692753358F005147AB /* AsyncAwaitTrainingInUIKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				D890B76A2753358F005147AB /* AsyncAwaitTrainingInUIKitTests.swift */,
+				D8E5C3C22755BED1001146E0 /* SearchRepositoryDataStoreTests.swift */,
+				D8E5C3C12755BED1001146E0 /* AsyncAwaitTrainingInUIKitTests-Bridging-Header.h */,
 			);
 			path = AsyncAwaitTrainingInUIKitTests;
 			sourceTree = "<group>";
@@ -253,6 +260,7 @@
 					};
 					D890B7652753358F005147AB = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
 						TestTargetID = D890B74F2753358E005147AB;
 					};
 					D890B76F2753358F005147AB = {
@@ -328,7 +336,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D890B76B2753358F005147AB /* AsyncAwaitTrainingInUIKitTests.swift in Sources */,
+				D8E5C3C82755BEE8001146E0 /* SearchResponseModel.swift in Sources */,
+				D8E5C3C32755BED1001146E0 /* SearchRepositoryDataStoreTests.swift in Sources */,
+				D8E5C3C42755BED9001146E0 /* SearchRepositoryDataStore.swift in Sources */,
+				D8E5C3C52755BEDC001146E0 /* SearchRepositoryInterface.swift in Sources */,
+				D8E5C3C72755BEE3001146E0 /* RepositoryLocator.swift in Sources */,
+				D8E5C3C62755BEDE001146E0 /* SearchRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +568,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZXZ96723Y7;
@@ -569,6 +583,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ken.AsyncAwaitTrainingInUIKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "AsyncAwaitTrainingInUIKitTests/AsyncAwaitTrainingInUIKitTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AsyncAwaitTrainingInUIKit.app/AsyncAwaitTrainingInUIKit";
@@ -580,6 +596,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZXZ96723Y7;
@@ -594,6 +611,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ken.AsyncAwaitTrainingInUIKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "AsyncAwaitTrainingInUIKitTests/AsyncAwaitTrainingInUIKitTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AsyncAwaitTrainingInUIKit.app/AsyncAwaitTrainingInUIKit";
