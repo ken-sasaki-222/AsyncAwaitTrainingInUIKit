@@ -20,15 +20,11 @@ class SearchRepositoryDataStoreTests: XCTestCase {
     func test_searchRepositoryDataStore() async throws {
         let dataStore = SearchRepositoryDataStore()
         let searchText = "Swift"
-        do {
-            let response = try await dataStore.searchRepositories(query: searchText)
-            let items = response.items
-            print("Success search repository dataStore.")
-            print("items:", items)
-        }
-        catch(let error) {
-            XCTFail(error.localizedDescription)
-        }
+        let response = try await dataStore.searchRepositories(query: searchText)
+        let items = response.items
+        print("Success search repository dataStore.")
+        print("items:", items)
+        XCTAssert(items.count > 0)
     }
 
     func testPerformanceExample() throws {
